@@ -1,0 +1,143 @@
+Start testing: Oct 04 22:09 EDT
+----------------------------------------------------------
+1/4 Testing: parser_test
+1/4 Test: parser_test
+Command: "/home/kali/Desktop/smart-agriculture-monitoring/smart-agriculture-monitoring/build/parser_test"
+Directory: /home/kali/Desktop/smart-agriculture-monitoring/smart-agriculture-monitoring/build
+"parser_test" start time: Oct 04 22:09 EDT
+Output:
+----------------------------------------------------------
+=== Sensor Parser Tests ===
+  TEST: Parse valid sensor line ... PASSED
+  TEST: Parse ALERT status line ... PASSED
+  TEST: Parse Tinkercad pipe-delimited sensor stream ... PASSED
+  TEST: Parse Tinkercad pipe-delimited alert stream (low soil & water) ... PASSED
+  TEST: Parse line with \r\n ... PASSED
+  TEST: Reject empty line ... PASSED
+  TEST: Reject line with missing fields ... [SensorProcessor] Invalid field count: 4 (expected 6)
+PASSED
+  TEST: Reject line with extra fields ... [SensorProcessor] Invalid field count: 7 (expected 6)
+PASSED
+  TEST: Reject non-numeric temperature ... [SensorProcessor] Non-numeric value in: abc,62.0,55.0,600.0,720.0,NORMAL
+PASSED
+  TEST: Reject invalid status ... [SensorProcessor] Invalid status: UNKNOWN
+PASSED
+  TEST: Validate normal reading passes ... PASSED
+  TEST: Validate out-of-range temperature fails ... PASSED
+  TEST: Validate negative humidity fails ... PASSED
+  TEST: getCurrentTimestamp returns non-empty string ... PASSED
+
+Results: 14 passed, 0 failed
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"parser_test" end time: Oct 04 22:09 EDT
+"parser_test" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/4 Testing: alert_test
+2/4 Test: alert_test
+Command: "/home/kali/Desktop/smart-agriculture-monitoring/smart-agriculture-monitoring/build/alert_test"
+Directory: /home/kali/Desktop/smart-agriculture-monitoring/smart-agriculture-monitoring/build
+"alert_test" start time: Oct 04 22:09 EDT
+Output:
+----------------------------------------------------------
+=== Alert Engine Tests ===
+  TEST: Normal reading produces no alerts ... PASSED
+  TEST: Temperature > 30°C triggers alert (LED3) ... PASSED
+  TEST: Temperature < 10°C triggers alert ... PASSED
+  TEST: Humidity < 400 triggers alert (LED2) ... PASSED
+  TEST: Soil moisture < 400 triggers alert (LED1) ... PASSED
+  TEST: Water level < 400 triggers alert (LED4) ... PASSED
+  TEST: All 4 parameter breaches trigger 4 alerts ... PASSED
+  TEST: Values at normal limits produce no alerts ... PASSED
+  TEST: formatAlert produces readable string ... PASSED
+
+Results: 9 passed, 0 failed
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"alert_test" end time: Oct 04 22:09 EDT
+"alert_test" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/4 Testing: database_test
+3/4 Test: database_test
+Command: "/home/kali/Desktop/smart-agriculture-monitoring/smart-agriculture-monitoring/build/database_test"
+Directory: /home/kali/Desktop/smart-agriculture-monitoring/smart-agriculture-monitoring/build
+"database_test" start time: Oct 04 22:09 EDT
+Output:
+----------------------------------------------------------
+=== Database Tests ===
+  TEST: Open database and create tables ... [Database] Opened test_agriculture.db
+[Database] Closed
+PASSED
+  TEST: Insert reading and retrieve latest (including waterLevel) ... [Database] Opened test_agriculture.db
+[Database] Closed
+PASSED
+  TEST: Retrieve history with correct ordering ... [Database] Opened test_agriculture.db
+[Database] Closed
+PASSED
+  TEST: Insert and retrieve alert ... [Database] Opened test_agriculture.db
+[Database] Closed
+PASSED
+  TEST: Empty database returns no latest reading ... [Database] Opened test_agriculture.db
+[Database] Closed
+PASSED
+  TEST: Multiple inserts maintain data integrity ... [Database] Opened test_agriculture.db
+[Database] Closed
+PASSED
+
+Results: 6 passed, 0 failed
+<end of output>
+Test time =   0.43 sec
+----------------------------------------------------------
+Test Passed.
+"database_test" end time: Oct 04 22:09 EDT
+"database_test" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/4 Testing: http_server_test
+4/4 Test: http_server_test
+Command: "/home/kali/Desktop/smart-agriculture-monitoring/smart-agriculture-monitoring/build/http_server_test"
+Directory: /home/kali/Desktop/smart-agriculture-monitoring/smart-agriculture-monitoring/build
+"http_server_test" start time: Oct 04 22:09 EDT
+Output:
+----------------------------------------------------------
+=== HTTP Server Tests ===
+[Database] Opened test_http_server.db
+[HttpServer] Listening on http://127.0.0.1:8081
+  TEST: Server binds and accepts connections ... [HttpServer] GET /
+PASSED
+  TEST: GET / returns HTML dashboard ... [HttpServer] GET /
+PASSED
+  TEST: GET /status returns 200 ... [HttpServer] GET /status
+PASSED
+  TEST: GET /alerts returns 200 ... [HttpServer] GET /alerts
+PASSED
+  TEST: GET /history returns 200 ... [HttpServer] GET /history
+PASSED
+  TEST: GET /invalid returns 404 ... [HttpServer] GET /invalid
+PASSED
+  TEST: POST / returns 405 ... [HttpServer] POST /
+PASSED
+  TEST: Response includes Content-Length header ... [HttpServer] GET /
+PASSED
+  TEST: Response includes Connection: close ... [HttpServer] GET /
+PASSED
+  TEST: Dashboard displays sensor data after insert ... [HttpServer] GET /
+PASSED
+[Database] Closed
+
+Results: 10 passed, 0 failed
+<end of output>
+Test time =   0.55 sec
+----------------------------------------------------------
+Test Passed.
+"http_server_test" end time: Oct 04 22:09 EDT
+"http_server_test" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Oct 04 22:09 EDT

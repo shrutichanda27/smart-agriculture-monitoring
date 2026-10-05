@@ -1,0 +1,2 @@
+/usr/bin/ar qc libagri_core.a CMakeFiles/agri_core.dir/src/sensor_processor.cpp.o CMakeFiles/agri_core.dir/src/serial_reader.cpp.o CMakeFiles/agri_core.dir/src/alert_engine.cpp.o CMakeFiles/agri_core.dir/src/database.cpp.o CMakeFiles/agri_core.dir/src/dashboard_generator.cpp.o CMakeFiles/agri_core.dir/src/http_server.cpp.o CMakeFiles/agri_core.dir/src/driver_monitor.cpp.o
+/usr/bin/ranlib libagri_core.a

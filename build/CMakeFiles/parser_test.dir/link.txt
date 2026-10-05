@@ -1,0 +1,1 @@
+/usr/bin/c++  -Wall -Wextra -pthread -Wl,--dependency-file=CMakeFiles/parser_test.dir/link.d CMakeFiles/parser_test.dir/tests/parser_test.cpp.o -o parser_test  libagri_core.a /usr/lib/x86_64-linux-gnu/libsqlite3.so

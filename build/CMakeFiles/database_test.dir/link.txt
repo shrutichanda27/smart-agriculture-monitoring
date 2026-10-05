@@ -1,0 +1,1 @@
+/usr/bin/c++  -Wall -Wextra -pthread -Wl,--dependency-file=CMakeFiles/database_test.dir/link.d CMakeFiles/database_test.dir/tests/database_test.cpp.o -o database_test  libagri_core.a /usr/lib/x86_64-linux-gnu/libsqlite3.so

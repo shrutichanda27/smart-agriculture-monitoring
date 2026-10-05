@@ -1,0 +1,1 @@
+/usr/bin/c++  -Wall -Wextra -pthread -Wl,--dependency-file=CMakeFiles/smart_agriculture.dir/link.d CMakeFiles/smart_agriculture.dir/src/main.cpp.o -o smart_agriculture  libagri_core.a /usr/lib/x86_64-linux-gnu/libsqlite3.so

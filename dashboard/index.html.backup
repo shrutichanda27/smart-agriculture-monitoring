@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Agriculture Monitoring System</title>
+    <meta name="description" content="Dashboard for the Smart Agriculture Monitoring System showing real-time sensor data, alerts, and history.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <h1>&#127793; Smart <span>Agriculture</span> Monitor</h1>
+        <div class="status-badge status-normal">STATIC PREVIEW</div>
+    </header>
+
+    <main class="container">
+        <div class="meta-info">
+            <span>This is the static HTML/CSS design reference.</span>
+            <span>Live data is served by the C++ HTTP server at http://127.0.0.1:8080</span>
+        </div>
+
+        <section class="cards">
+            <div class="card" id="card-temperature">
+                <div class="icon">&#127777;&#65039;</div>
+                <div class="label">Temperature</div>
+                <div class="value">25.3<span class="unit"> &deg;C</span></div>
+            </div>
+
+            <div class="card" id="card-humidity">
+                <div class="icon">&#128167;</div>
+                <div class="label">Humidity</div>
+                <div class="value">55.0<span class="unit"> %</span></div>
+            </div>
+
+            <div class="card" id="card-soil">
+                <div class="icon">&#127807;</div>
+                <div class="label">Soil Moisture</div>
+                <div class="value">60.0<span class="unit"> %</span></div>
+            </div>
+
+            <div class="card" id="card-water">
+                <div class="icon">&#128166;</div>
+                <div class="label">Water Level</div>
+                <div class="value">610</div>
+            </div>
+
+            <div class="card" id="card-light">
+                <div class="icon">&#9728;&#65039;</div>
+                <div class="label">Light Intensity</div>
+                <div class="value">720.0</div>
+            </div>
+        </section>
+
+        <section class="section" id="alerts-section">
+            <h2>&#128680; Recent Alerts</h2>
+            <p class="normal-row">No active alerts. All parameters within normal range.</p>
+        </section>
+
+        <section class="section" id="history-section">
+            <h2>&#128202; Sensor History</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Temp (&deg;C)</th>
+                        <th>Humidity</th>
+                        <th>Soil Moisture</th>
+                        <th>Water Level</th>
+                        <th>Light</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="normal-row">
+                        <td>2025-01-01 12:00:00</td>
+                        <td>25.3</td>
+                        <td>550</td>
+                        <td>600</td>
+                        <td>610</td>
+                        <td>720</td>
+                        <td>NORMAL</td>
+                    </tr>
+                    <tr class="normal-row">
+                        <td>2025-01-01 11:58:00</td>
+                        <td>28.1</td>
+                        <td>620</td>
+                        <td>450</td>
+                        <td>580</td>
+                        <td>680</td>
+                        <td>NORMAL</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer class="footer">
+        Smart Agriculture Monitoring System &mdash; C++ / Linux / SQLite / TCP/HTTP<br>
+        Server: 127.0.0.1:8080 &mdash; Local access only
+    </footer>
+</body>
+</html>

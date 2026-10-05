@@ -1,0 +1,9 @@
+/home/kali/Desktop/smart-agriculture-monitoring/smart-agriculture-monitoring/build/CMakeFiles/agri_core.dir
+/home/kali/Desktop/smart-agriculture-monitoring/smart-agriculture-monitoring/build/CMakeFiles/smart_agriculture.dir
+/home/kali/Desktop/smart-agriculture-monitoring/smart-agriculture-monitoring/build/CMakeFiles/parser_test.dir
+/home/kali/Desktop/smart-agriculture-monitoring/smart-agriculture-monitoring/build/CMakeFiles/alert_test.dir
+/home/kali/Desktop/smart-agriculture-monitoring/smart-agriculture-monitoring/build/CMakeFiles/database_test.dir
+/home/kali/Desktop/smart-agriculture-monitoring/smart-agriculture-monitoring/build/CMakeFiles/http_server_test.dir
+/home/kali/Desktop/smart-agriculture-monitoring/smart-agriculture-monitoring/build/CMakeFiles/test.dir
+/home/kali/Desktop/smart-agriculture-monitoring/smart-agriculture-monitoring/build/CMakeFiles/edit_cache.dir
+/home/kali/Desktop/smart-agriculture-monitoring/smart-agriculture-monitoring/build/CMakeFiles/rebuild_cache.dir

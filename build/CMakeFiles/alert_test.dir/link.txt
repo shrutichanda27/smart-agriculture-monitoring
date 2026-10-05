@@ -1,0 +1,1 @@
+/usr/bin/c++  -Wall -Wextra -pthread -Wl,--dependency-file=CMakeFiles/alert_test.dir/link.d CMakeFiles/alert_test.dir/tests/alert_test.cpp.o -o alert_test  libagri_core.a /usr/lib/x86_64-linux-gnu/libsqlite3.so
